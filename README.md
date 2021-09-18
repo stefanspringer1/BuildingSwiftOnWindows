@@ -46,6 +46,8 @@ After installation of Visual Studio, most of the following commands have to be e
 
 ## Python
 
+Change the Python installed by the Visual Studio installer as follows:
+
 1. In the Windows settings, go to Add and Remove Programs.
 2. Select the Python (64-bit) installed by Visual Studio.
 3. Click Modify, then Yes, then Modify again and then Next.
@@ -58,7 +60,7 @@ After installation of Visual Studio, most of the following commands have to be e
 
 ## Git
 
-Check:
+Git should now be installed by the Visual Studio installer.
 
 **Check:** Does the command `git --version`, executed from the "64 Native Tools Command Prompt for VSXXXX", display a version 2 or greater? If not, add `%ProgramFiles%\Git\usr\bin` to the PATH environment variable.
 
