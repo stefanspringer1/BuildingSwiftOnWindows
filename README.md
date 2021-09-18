@@ -186,7 +186,7 @@ git -C swift checkout tags/swift-5.4.3-RELEASE
 git -C swift tag --points-at HEAD -l *5.4.3-RELEASE*
 ```
 
-## Build the toolchain, #1
+## Building the toolchain, #1
 
 **Important:** In the following commands, subdirectories of `S:` will be used as build folders. At least at a first try, do not change those paths, as the build directory of one command might be used by a subsequent command.
 
