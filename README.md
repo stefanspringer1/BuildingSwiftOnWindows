@@ -196,6 +196,8 @@ Note:
 - You may leave out `-D LLVM_PARALLEL_LINK_JOBS=1` and `-D DLLVM_PARALLEL_LINK_JOBS=1` or set higher numbers if you have enogh RAM (up to 32 GB with debug information via `-D LLVM_ENABLE_PDB=YES`).
 - You may leave out `-D LLVM_ENABLE_PDB=YES` if you do not need debug information.
 
+Configuration:
+
 ```batch
 cmake -B "S:\b\1" ^
   -C S:\swift\cmake\caches\Windows-x86_64.cmake ^
@@ -217,5 +219,12 @@ cmake -B "S:\b\1" ^
   -G Ninja ^
   -S S:\llvm-project\llvm
 
+
+```
+
+Building:
+
+```batch
+ninja -C S:\b\1
 
 ```
