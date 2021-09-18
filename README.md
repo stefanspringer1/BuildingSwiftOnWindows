@@ -193,7 +193,7 @@ git -C swift tag --points-at HEAD -l *5.4.3-RELEASE*
 Note:
 
 - You may leave out out `-D CMAKE_C_FLAGS="/bigobj"` and `-D CMAKE_CXX_FLAGS="/bigobj"` as they are only necessary if you are getting "compile with /bigobj" errors.
-- You may leave out `-D LLVM_PARALLEL_LINK_JOBS=1` and `-D DLLVM_PARALLEL_LINK_JOBS=1` or set higher numbers if you have enogh RAM (up to 32 GB with debug information via `-D LLVM_ENABLE_PDB=YES`).
+- You may leave out `-D LLVM_PARALLEL_LINK_JOBS=1` and `-D DLLVM_PARALLEL_LINK_JOBS=1` or set higher numbers if you have enough RAM (might need 32 GB with debug information via `-D LLVM_ENABLE_PDB=YES`).
 - You may leave out `-D LLVM_ENABLE_PDB=YES` if you do not need debug information.
 
 Configuration:
