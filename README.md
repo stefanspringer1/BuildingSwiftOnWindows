@@ -2,7 +2,11 @@
 
 ## Developer Mode
 
-The Swift Package Manager uses symbolic links, but Microsoft has decided that symbolic links might be harmful (see [there](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc766301(v=ws.10)) under "Create symbolic links"). You can test if you can set symbolic links with the command `mklink newfile oldfile`, creating a symbolic link file named `newfile` pointing to `oldfile`. If this command is successful, everything is OK. Else, you can try to activate the Deverloper Mode in the Windows settings and then restart the computer. You should then be able to create symbolic links (test with the mentioned command again). If not, you need to set the SE_CREATE_SYMBOLIC_LINK privilege using the `gpedit.msc` tool (start it via the context menu of the Windows Explorer as Administrator). (Note that other security policies for your computer might overwrite this setting.) If you have the Home edition of of Windows, you first have to get this tool from Microsoft using the following script (open the command line window as Administrator):
+The Swift Package Manager uses symbolic links, but Microsoft has decided that symbolic links might be harmful (see [there](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc766301(v=ws.10)) under "Create symbolic links").
+
+**Check:**  You can test if you can set symbolic links with the command `mklink newfile oldfile`, creating a symbolic link file named `newfile` pointing to `oldfile`. If this command is successful, everything is OK.
+
+If you cannot set symbolic links, you can try to activate the Deverloper Mode in the Windows settings and then restart the computer. You should then be able to create symbolic links (test with the mentioned command again). If not, you need to set the SE_CREATE_SYMBOLIC_LINK privilege using the `gpedit.msc` tool (start it via the context menu of the Windows Explorer as Administrator). (Note that other security policies for your computer might overwrite this setting.) If you have the Home edition of of Windows, you first have to get this tool from Microsoft using the following script (open the command line window as Administrator):
 
 ```Batch
 @echo off 
@@ -49,6 +53,7 @@ After installation of Visual Studio, most of the following commands have to be e
 5. Click Install.
 
 **Check:** Does the command `python --version`, executed in the "64 Native Tools Command Prompt for VSXXXX", print the correct Python version? If not, add `C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64` or `%ProgramFiles%\Microsoft Visual Studio\Shared\Python37_64` (see what matches) to the PATH environment variable.
+
 **Check:** Create a Python file (extension `.py`) with content `import sys; print(sys.version)`, and call this file from the "64 Native Tools Command Prompt for VSXXXX" with only the path to it. The correct Python version should be then be displayed. If not, associate Python files (`*.py`) with `py.exe` installed by pylauncher from https://bitbucket.org/vinay.sajip/pylauncher/downloads/ (use launcher.amd64.msi: 64-bit launcher, installs to `C:\Program Files\Python Launcher`), by first calling your Python file by its path and then in the Windows dialog choose the Python Launcher with the "always" option. 
 
 ## Git
@@ -56,6 +61,7 @@ After installation of Visual Studio, most of the following commands have to be e
 Check:
 
 **Check:** Does the command `git --version`, executed from the "64 Native Tools Command Prompt for VSXXXX", display a version 2 or greater? If not, add `%ProgramFiles%\Git\usr\bin` to the PATH environment variable.
+
 **Check:** Is the `less` command available from the "64 Native Tools Command Prompt for VSXXXX"? If not, add `%ProgramFiles%\Git\usr\bin` to the PATH environment variable.
 
 ## The Working Directory
@@ -182,11 +188,11 @@ git -C swift tag --points-at HEAD -l *5.4.3-RELEASE*
 
 **Important:** In the following commands, subdirectories of `S:` will be used as build folders. At least at a first try, do not change those paths, as the build directory of one command might be used by a subsequent command.
 
-You may leave out out `-D CMAKE_C_FLAGS="/bigobj"` and `-D CMAKE_CXX_FLAGS="/bigobj"` as they are only necessary if you are getting "compile with /bigobj" errors.
+Note:
 
-You may leave out `-D LLVM_PARALLEL_LINK_JOBS=1` and `-D DLLVM_PARALLEL_LINK_JOBS=1` or set higher numbers if you have enogh RAM (up to 32 GB with debug information via `-D LLVM_ENABLE_PDB=YES`).
-
-You may leave out `-D LLVM_ENABLE_PDB=YES` if you do not need debug information.
+- You may leave out out `-D CMAKE_C_FLAGS="/bigobj"` and `-D CMAKE_CXX_FLAGS="/bigobj"` as they are only necessary if you are getting "compile with /bigobj" errors.
+- You may leave out `-D LLVM_PARALLEL_LINK_JOBS=1` and `-D DLLVM_PARALLEL_LINK_JOBS=1` or set higher numbers if you have enogh RAM (up to 32 GB with debug information via `-D LLVM_ENABLE_PDB=YES`).
+- You may leave out `-D LLVM_ENABLE_PDB=YES` if you do not need debug information.
 
 ```batch
 cmake -B "S:\b\1" ^
