@@ -6,7 +6,7 @@ The Developer Mode should be activated in the Windows settings. One reason for t
 
 **Check:**  You can test if you can set symbolic links with the command `mklink newfile oldfile`, creating a symbolic link file named `newfile` pointing to `oldfile`. If this command is successful, everything is OK regarding symbolic links. (It might still be a good idea to activate the Developer Mode.)
 
-Usually you do not need to restart the computer after activating the Developer Mode. You should immediateley be able to create symbolic links (test with the mentioned command again). If not, and even restarting the computer does not help, you need to set the SE_CREATE_SYMBOLIC_LINK privilege using the `gpedit.msc` tool (start it via the context menu of the Windows Explorer as Administrator). (Note that other security policies for your computer might overwrite this setting.) If you have the Home edition of of Windows, you first have to get this tool from Microsoft using the following script (open the command line window as Administrator):
+Usually you do not need to restart the computer after activating the Developer Mode. You should immediateley be able to create symbolic links (test with the mentioned command again). If not, and even restarting the computer does not help, you need to set the SE_CREATE_SYMBOLIC_LINK privilege using the `gpedit.msc` tool (start it via the context menu of the Windows Explorer as Administrator). If you have the Home edition of of Windows, you first have to get this tool from Microsoft using the following script (open the command line window as Administrator):
 
 ```Batch
 @echo off 
