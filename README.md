@@ -2,7 +2,7 @@
 
 ## Developer Mode
 
-The Developer Mode should be activated in the Windows settings. One reason for this is that the tool sshpuld be able to set symbolic links, but Microsoft has decided that symbolic links might be harmful (see [there](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc766301(v=ws.10)) under "Create symbolic links").
+The Developer Mode should be activated in the Windows settings. One reason for this is that the tools should be able to set symbolic links, but Microsoft has decided that symbolic links might be harmful (see [there](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc766301(v=ws.10)) under "Create symbolic links").
 
 **Check:**  You can test if you can set symbolic links with the command `mklink newfile oldfile`, creating a symbolic link file named `newfile` pointing to `oldfile`. If this command is successful, everything is regarding symbolic links. (It might still be a good idea to activate the Developer Mode.)
 
