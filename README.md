@@ -196,7 +196,7 @@ Note:
 - You may leave out `-D LLVM_PARALLEL_LINK_JOBS=1` and `-D DLLVM_PARALLEL_LINK_JOBS=1` or set higher numbers if you have enough RAM (might need 32 GB with debug information via `-D LLVM_ENABLE_PDB=YES`).
 - You may leave out `-D LLVM_ENABLE_PDB=YES` if you do not need debug information.
 
-Configuration as follows. The redirection at the end writes all output (including errors) to the file `onf.log` so you can check e.g. for any "missing:" messages. It may take a minute or two.
+Configuration as follows. The redirection at the end writes all output (including errors) to the file `conf.log` so you can check e.g. for any "missing:" messages. It may take a minute or two.
 
 ```batch
 cmake -B "S:\b\1" ^
