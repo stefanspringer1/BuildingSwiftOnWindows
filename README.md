@@ -196,7 +196,7 @@ Note:
 - You may leave out `-D LLVM_PARALLEL_LINK_JOBS=1` and `-D DLLVM_PARALLEL_LINK_JOBS=1` or set higher numbers if you have enough RAM (might need 32 GB with debug information via `-D LLVM_ENABLE_PDB=YES`).
 - You may leave out `-D LLVM_ENABLE_PDB=YES` if you do not need debug information.
 
-Configuration:
+Configuration as follows. The redirection at the end write to file all output (including errors) to the file `onf.log` so you can check e.g. for any "missing:" messages. It may take a minute or two.
 
 ```batch
 cmake -B "S:\b\1" ^
@@ -217,8 +217,8 @@ cmake -B "S:\b\1" ^
   -D SWIFT_WINDOWS_x86_64_ICU_UC_INCLUDE=S:\Library\icu-67\usr\include ^
   -D SWIFT_WINDOWS_x86_64_ICU_UC=S:\Library\icu-67\usr\lib\icuuc67.lib ^
   -G Ninja ^
-  -S S:\llvm-project\llvm
-
+  -S S:\llvm-project\llvm ^
+  > conf.log 2>&1
 
 ```
 
