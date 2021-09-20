@@ -287,6 +287,8 @@ cmake -B "S:\b\1" ^
 
 ```
 
+**Note:** It is a good idea to call this command via a batch script, so you can later more easily control what arguments you were using.
+
 Building:
 
 ```batch
