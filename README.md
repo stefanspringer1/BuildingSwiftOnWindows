@@ -186,6 +186,41 @@ git -C swift checkout tags/swift-5.4.3-RELEASE
 git -C swift tag --points-at HEAD -l *5.4.3-RELEASE*
 ```
 
+Use the following Windows batch script, placed at `S:`, to list filtered tags for all repositories:
+
+```batch
+@ECHO OFF
+
+FOR /d %%D IN (*) DO (
+  IF "%%~fD" == "S:\b" (
+    REM
+  ) ELSE (
+    IF "%%~fD" == "S:\Library" (
+      REM
+    ) ELSE (
+      ECHO.
+      ECHO %%~fD
+      ECHO -----------------------------
+      IF "%%~fD" == "S:\swift-argument-parser" (
+        git -C "%%~fD" tag --points-at HEAD
+      ) ELSE (
+        IF "%%~fD" == "S:\Yams" (
+          git -C "%%~fD" tag --points-at HEAD
+        ) ELSE (
+          git -C "%%~fD" tag --points-at HEAD -l %1
+        )
+      )
+    )
+  )
+)
+```
+
+E.g., if the script is called `show-tags.bat`, list the Swift release tags at your current HEADs with:
+
+```batch
+show-tags.bat swift-*-RELEASE
+```
+
 ## Building the toolchain, #1
 
 **Important:** In the following commands, subdirectories of `S:` will be used as build folders. At least at a first try, do not change those paths, as the build directory of one command might be used by a subsequent command.
