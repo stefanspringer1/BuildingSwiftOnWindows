@@ -184,7 +184,28 @@ git -C swift checkout tags/swift-5.4.3-RELEASE
 
 **Important:** Use e.g. `git -C swift switch -` the return from the detached head.
 
-**Check:** Use the following Windows batch script, placed at `S:`, to list the tags for all repositories, filtered by the expression given as first argument:
+**Check:** Use the following Windows batch script, named e.g. `status.bat`, placed at `S:`, to see if the HEADs of the checked-out repositories are correct and if you do not have any unwanted change in the according directories ("nothing to commit"):
+
+```batch
+@ECHO OFF
+
+FOR /d %%D IN (*) DO (
+  IF "%%~fD" == "S:\b" (
+    REM
+  ) ELSE (
+    IF "%%~fD" == "S:\Library" (
+      REM
+    ) ELSE (
+      ECHO.
+      ECHO %%~fD
+      ECHO -----------------------------
+      git -C "%%~fD" status
+    )
+  )
+)
+```
+
+Use the following Windows batch script, named e.g. `tag.bat`, placed at `S:`, to list the tags for all repositories, filtered by the expression given as first argument, followed by a status output:
 
 ```batch
 @ECHO OFF
@@ -201,11 +222,14 @@ FOR /d %%D IN (*) DO (
       ECHO -----------------------------
       IF "%%~fD" == "S:\swift-argument-parser" (
         git -C "%%~fD" tag --points-at HEAD
+        git -C "%%~fD" status
       ) ELSE (
         IF "%%~fD" == "S:\Yams" (
           git -C "%%~fD" tag --points-at HEAD
+        git -C "%%~fD" status
         ) ELSE (
           git -C "%%~fD" tag --points-at HEAD -l %1
+          git -C "%%~fD" status
         )
       )
     )
