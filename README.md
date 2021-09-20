@@ -184,7 +184,7 @@ git -C swift checkout tags/swift-5.4.3-RELEASE
 
 **Important:** Use e.g. `git -C swift switch -` the return from the detached head.
 
-**Check:** Use the following Windows batch script, named e.g. `status.bat` and placed at `S:`, to see if the HEADs of the checked-out repositories are correct and if you do not have any unwanted change in the according directories ("nothing to commit"):
+**Check:** Use the following Windows batch script, placed at `S:` and named e.g. `status.bat`, to see if the HEADs of the checked-out repositories are correct and if you do not have any unwanted change in the according directories ("nothing to commit"):
 
 ```batch
 @ECHO OFF
@@ -205,7 +205,7 @@ FOR /d %%D IN (*) DO (
 )
 ```
 
-Use the following Windows batch script, named e.g. `tag.bat` and placed at `S:`, to list the tags for all repositories, filtered by the expression given as first argument, followed by a status output:
+Use the following Windows batch script, placed at `S:` and named e.g. `tag.bat`, to list the tags for all repositories, filtered by the expression given as first argument, followed by a status output:
 
 ```batch
 @ECHO OFF
