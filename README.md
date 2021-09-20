@@ -106,8 +106,6 @@ This will take a while.
 
 Create links inside Visual Studio to some Swift files. Open the "64 Native Tools Command Prompt for VSXXXX" by right clicking whatever shortcut you used to open the first one, choosing **"Run As Administrator",** and pasting the above commands into the resulting window. You can then close the privileged prompt; this is the only step which requires elevation.
 
-**Check:** When executing the following commands, there should be four  `<<===>>` displayed.
-
 ```
 if exist "%UniversalCRTSdkDir%Include\%UCRTVersion%\ucrt\module.modulemap" del /Q "%UniversalCRTSdkDir%Include\%UCRTVersion%\ucrt\module.modulemap"
 mklink "%UniversalCRTSdkDir%Include\%UCRTVersion%\ucrt\module.modulemap" S:\swift\stdlib\public\Platform\ucrt.modulemap
@@ -119,6 +117,8 @@ if exist "%VCToolsInstallDir%include\visualc.apinotes" del /Q "%VCToolsInstallDi
 mklink "%VCToolsInstallDir%include\visualc.apinotes" S:\swift\stdlib\public\Platform\visualc.apinotes
 
 ```
+
+**Check:** When executing those commands, there should be four  `<<===>>` displayed.
 
 ## Dependencies (ICU, SQLite3, curl, libxml2 and zlib)
 
