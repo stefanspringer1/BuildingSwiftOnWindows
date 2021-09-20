@@ -239,10 +239,10 @@ FOR /d %%D IN (*) DO (
 
 (Note the command `git -C <directory> tag --points-at HEAD -l <filter>` to list all tags at HEAD filtered by `<filter>`. For the repositories `swift-argument-parser` and `Yam`, the filter is not used.)
 
-E.g., list the Swift release tags at your current HEADs with:
+E.g., using this `tag.bat` script, list the Swift release tags at your current HEADs with:
 
 ```batch
-tag.bat swift-*-RELEASE
+tag swift-*-RELEASE
 ```
 
 ## Building the toolchain, #1
