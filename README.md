@@ -144,7 +144,7 @@ To build those dependencies, you first need the sources and build them yourself.
 git clone https://github.com/stefanspringer1/SwiftDependencies.git Library
 ```
 
-**Important:** Do not forget the `Library` in the above command to checkout with that diretory name.
+**Important:** Do not forget the `Library` in the above command to checkout with that directory name.
 
 **Check:** See if the above directory structure matches.
 
