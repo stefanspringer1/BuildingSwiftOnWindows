@@ -158,11 +158,13 @@ The sources for sqlite-3.28.0 can be obtained from https://sqlite.org/index.html
 
 ## Check out the sources with certain tags
 
-To get the tags in a repository, filtered by an expression, use in `S:` the following command for e.g. alles release versions for the "swift" repository (`-C ...` chooses the subdirectory, you do not have to change your current directory, you can drop e.g. `-C swift` when you are in the `swift` subdirectory), press the space bar to read more after an ":" or press "q" to quit:
+To get the tags in a repository, filtered by an expression, use in `S:` the following command for e.g. alles release versions for the "swift" repository, press the space bar to read more after an ":" or press "q" to quit:
 
 ```batch
 git -C swift tag -l *RELEASE
 ```
+
+(`-C ...` chooses the subdirectory, so you do not have to change your current directory, you can drop e.g. `-C swift` when you are in the `swift` subdirectory. Be sure to use an uppercase `C`.)
 
 Or more precise: lookup for a certain version:
 
