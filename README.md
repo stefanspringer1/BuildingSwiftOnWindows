@@ -249,6 +249,8 @@ tag swift-*-RELEASE
 
 **Important:** Note that the script only list the tags for HEAD.
 
+**Note:** If any of those checked-out repositories are in a state that you do not understand or cannot fix, first make a backup of any change in that directory you might want to keep, then remove the according directory and clone the repository again (with one of the commands above!).
+
 ## Building the toolchain, #1
 
 **Important:** In the following commands, subdirectories of `S:` will be used as build folders. At least at a first try, do not change those paths, as the build directory of one command might be used by a subsequent command.
