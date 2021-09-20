@@ -184,7 +184,7 @@ git -C swift checkout tags/swift-5.4.3-RELEASE
 
 **Important:** Use e.g. `git -C swift switch -` the return from the detached head.
 
-**Check:** Use the following Windows batch script, named e.g. `status.bat`, placed at `S:`, to see if the HEADs of the checked-out repositories are correct and if you do not have any unwanted change in the according directories ("nothing to commit"):
+**Check:** Use the following Windows batch script, named e.g. `status.bat` and placed at `S:`, to see if the HEADs of the checked-out repositories are correct and if you do not have any unwanted change in the according directories ("nothing to commit"):
 
 ```batch
 @ECHO OFF
@@ -205,7 +205,7 @@ FOR /d %%D IN (*) DO (
 )
 ```
 
-Use the following Windows batch script, named e.g. `tag.bat`, placed at `S:`, to list the tags for all repositories, filtered by the expression given as first argument, followed by a status output:
+Use the following Windows batch script, named e.g. `tag.bat` and placed at `S:`, to list the tags for all repositories, filtered by the expression given as first argument, followed by a status output:
 
 ```batch
 @ECHO OFF
@@ -239,10 +239,10 @@ FOR /d %%D IN (*) DO (
 
 (Note the command `git -C <directory> tag --points-at HEAD -l <filter>` to list all tags at HEAD filtered by `<filter>`. For the repositories `swift-argument-parser` and `Yam`, the filter is not used.)
 
-E.g., if the script is called `show-tags.bat`, list the Swift release tags at your current HEADs with:
+E.g., list the Swift release tags at your current HEADs with:
 
 ```batch
-show-tags.bat swift-*-RELEASE
+tag.bat swift-*-RELEASE
 ```
 
 ## Building the toolchain, #1
