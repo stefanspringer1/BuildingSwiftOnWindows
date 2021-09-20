@@ -178,7 +178,7 @@ git -C swift checkout tags/swift-5.4.3-RELEASE
 
 **Important:** The naming conventions for those tags might change.
 
-**Important:** Check the Git documentations to see what consequences the various types of checkouts have, in this case we have a so-called "detached head". You also get a warning, turn the warning permanently off with `git config --global advice.detachedHead false`. If you would like to make changes that you also like to check-in, you need to also create a branch while checking out a tag.
+**Important:** Check the Git documentations to see what consequences the various types of checkouts have, in this case we have a so-called "detached head". You also get a warning, you might want to turn the warning permanently off with `git config --global advice.detachedHead false`. If you would like to make changes that you also like to check-in, you need to also create a branch while checking out a tag.
 
 **Important:** Use e.g. `git -C swift switch -` the return from the detached head.
 
