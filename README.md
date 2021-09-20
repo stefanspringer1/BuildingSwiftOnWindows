@@ -186,7 +186,7 @@ git -C swift checkout tags/swift-5.4.3-RELEASE
 git -C swift tag --points-at HEAD -l *5.4.3-RELEASE*
 ```
 
-Use the following Windows batch script, placed at `S:`, to list filtered tags for all repositories:
+Use the following Windows batch script, placed at `S:`, to list the tags for all repositories, filtered by the expression given as first argument:
 
 ```batch
 @ECHO OFF
@@ -214,6 +214,8 @@ FOR /d %%D IN (*) DO (
   )
 )
 ```
+
+(For the repositories `swift-argument-parser` and `Yam`, the filter is not used.)
 
 E.g., if the script is called `show-tags.bat`, list the Swift release tags at your current HEADs with:
 
