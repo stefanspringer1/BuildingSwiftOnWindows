@@ -249,7 +249,7 @@ tag swift-*-RELEASE
 
 **Important:** Note that the script only list the tags for HEAD.
 
-**Note:** If any of those checked-out repositories are in a state that you do not understand or cannot fix, first make a backup of any change in that directory you might want to keep, then remove the according directory and clone the repository again (with one of the commands above!).
+**Note:** If any of those checked-out repositories are in a state that you do not understand or cannot fix, first make a backup of any change in that directory you might want to keep, then remove the according directory and clone the repository again (with one of the commands listed under "Clone the sources"!).
 
 ## Building the toolchain, #1
 
