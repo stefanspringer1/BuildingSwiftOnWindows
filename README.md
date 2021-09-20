@@ -205,7 +205,7 @@ FOR /d %%D IN (*) DO (
 )
 ```
 
-Use the following Windows batch script, placed at `S:` and named e.g. `tag.bat`, to list the tags for all repositories, filtered by the expression given as first argument, followed by a status output:
+Use the following Windows batch script, placed at `S:` and named e.g. `tag.bat`, to list the tags for all repositories, filtered by the expression given as first argument:
 
 ```batch
 @ECHO OFF
