@@ -1,5 +1,7 @@
 # Building Swift on Windows
 
+_This document can be considered as a longer, more detailed version of https://github.com/apple/swift/blob/main/docs/WindowsBuild.md. It is not part of the official Swift distribution. It comes without warranty._
+
 ## Developer Mode
 
 The Developer Mode should be activated in the Windows settings. One reason for this is that the tools should be able to set symbolic links, but Microsoft has decided that symbolic links might be harmful (see [there](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc766301(v=ws.10)) under "Create symbolic links").
