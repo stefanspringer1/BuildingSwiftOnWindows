@@ -205,7 +205,7 @@ FOR /d %%D IN (*) DO (
 )
 ```
 
-Use the following Windows batch script, placed at `S:` and named e.g. `tag.bat`, to list the tags for all repositories, filtered by the expression given as first argument:
+Use the following Windows batch script, placed at `S:` and named e.g. `tag.bat`, to list the tags for the HEADs for all repositories, filtered by the expression given as first argument:
 
 ```batch
 @ECHO OFF
@@ -244,6 +244,8 @@ E.g., using this `tag.bat` script, list the Swift release tags at your current H
 ```batch
 tag swift-*-RELEASE
 ```
+
+**Important:** Note that the script only list the tags for HEAD.
 
 ## Building the toolchain, #1
 
