@@ -186,7 +186,7 @@ git -C swift checkout tags/swift-5.4.3-RELEASE
 
 **Important:** Use e.g. `git -C swift switch -` the return from the detached head.
 
-**Check:** Use the following Windows batch script, placed at `S:` and named e.g. `status.bat`, to see if the HEADs of the checked-out repositories are correct (should output e.g. "HEAD detached at swift-5.4.3-RELEASE" for the according respositories if checked-out as in the example above) and if you do not have any unwanted change in the according directories (should output "nothing to commit"):
+**Check:** Use the following Windows batch script, placed at `S:` and named e.g. `status.bat`, to see if the HEADs of the checked-out repositories are correct (should output e.g. "HEAD detached at swift-5.4.3-RELEASE" for the according respositories if checked-out as in the example above) and if you do not have any unwanted change in the according directories (should output "nothing to commit, working tree clean"):
 
 ```batch
 @ECHO OFF
