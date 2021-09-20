@@ -154,7 +154,7 @@ If you want the sources, the links for according repositories are:
 - libxml2-development: https://github.com/gnome/libxml2
 - zlib-1.2.11: https://github.com/madler/zlib
 
-The sources for sqlite-3.28.0 can be obatined from https://sqlite.org/index.html, the ones for `icu-67` from https://icu.unicode.org/download.
+The sources for sqlite-3.28.0 can be obtained from https://sqlite.org/index.html, the ones for `icu-67` from https://icu.unicode.org/download.
 
 ## Check out the sources with certain tags
 
