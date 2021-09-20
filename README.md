@@ -161,13 +161,13 @@ The sources for sqlite-3.28.0 can be obtained from https://sqlite.org/index.html
 To get the tags in a repository, filtered by an expression, use in `S:` the following command for e.g. alles release versions for the "swift" repository (`C` choose the subdirectory, you do not have to change your current directory, you can drop e.g. `-C swift` when you are in the `swift` subdirectory), press the space bar to read more after an ":" or press "q" to quit:
 
 ```batch
-git -C swift tag -l *RELEASE*
+git -C swift tag -l *RELEASE
 ```
 
 Or more precise: lookup for a certain version:
 
 ```batch
-git -C swift tag -l *5.4.3-RELEASE*
+git -C swift tag -l *-5.4.3-RELEASE
 ```
 
 You can then checkout the tag found with e.g.:
@@ -175,6 +175,8 @@ You can then checkout the tag found with e.g.:
 ```batch
 git -C swift checkout tags/swift-5.4.3-RELEASE
 ```
+
+**Important:** The naming conventions for those tags might change.
 
 **Important:** Check the Git documentations to see what consequences the various types of checkouts have, in this case we have a so-called "detached head". You also get a warning, turn the warning permanently off with `git config --global advice.detachedHead false`. If you would like to make changes that you also like to check-in, you need to also create a branch while checking out a tag.
 
