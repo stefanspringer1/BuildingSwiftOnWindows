@@ -191,8 +191,8 @@ When building for Windows, get the _commit numbers_ of the repositories so that 
 
 1. Go to https://dev.azure.com/compnerd/swift-build/_build.
 2. Click on "AlL".
-3. Seeach for a pipeline that is named like the Visual Studio version that you are using together with a Swift version number (e.g. "VS2019 5.4"). Don't mind a red symbol. Click on it.
-4. Now you have a new list of builds. Click of the first that does not have a red symbol (so it has only "Success" and "Warning" symbols).
+3. Search for a pipeline that is named like the Visual Studio version that you are using together with a Swift version number (e.g. "VS2019 5.4"). Don't mind a red symbol. Click on it.
+4. Now you have a new list of builds. Click on the first that has only green "Success" symbols.
 4. Srcoll donw to the "Sources" section. You can find the commit numbers for the different repositories under "Version". (For commits, only the first eight digits are displayed, usually that is enough, see next section. The whole commit number is the last part of the URL of that link.)
 
 **Note:** Keep the link to that page for later lookup.
