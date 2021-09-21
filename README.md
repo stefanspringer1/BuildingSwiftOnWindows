@@ -195,6 +195,8 @@ When building for Windows, get the _commit numbers_ of the repositories so that 
 4. Now you have a new list of builds. Click of the first that does not have a red symbol (so it has only "Success" and "Warning" symbols).
 4. Srcoll donw to the "Sources" section. You can find the commit numbers for the different repositories under "Version". (For commits, only the first eight digits are displayed, usually that is enough, see next section. The whole commit number is the last part of the URL of that link.)
 
+**Note:** Keep the link to that page for later lookup.
+
 Check-out all repositories with the according commit numbers as explained in the next section.
 
 ## Check out the sources of certain commits or tags
