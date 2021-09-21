@@ -42,11 +42,18 @@ vs_community ^
   --add Microsoft.VisualStudio.Component.Git ^
   --add Microsoft.VisualStudio.Component.VC.ATL ^
   --add Microsoft.VisualStudio.Component.VC.CMake.Project ^
-  --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 ^
-  --add Microsoft.VisualStudio.Component.Windows10SDK ^
-  --add Microsoft.VisualStudio.Component.Windows10SDK.17763
+  --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
 
 ```
+
+In addition, a Windows 10 SDK is needed, try the most recent one (go to "Indiviual Components" an search for "Windows 10 SDK"). Via command line, the Windows 10 SDK could be selected by adding (e.g. for version "17763") the follwoing two lines to the above command (do not forget to then end the last line of the above command with ` ^` first):
+
+```batch
+  --add Microsoft.VisualStudio.Component.Windows10SDK ^
+  --add Microsoft.VisualStudio.Component.Windows10SDK.17763
+```
+
+If you are not doing a new Visual Studio installation, make an update of Visual Studio, so you will use an up-to-date cmake etc.
 
 After installation of Visual Studio, most of the following commands have to be executed in the "64 Native Tools Command Prompt for VSXXXX" ("XXXX" replaced by the named version of Visual Studio, e.g. "2019").
 
