@@ -90,7 +90,9 @@ You may work in any directory, but in our commands we will use the drive `S:` as
 3. Double click on the name and for `Value data` enter `subst S: mypath` (`mypath` replaced with your path).
 4. Restart Windows.
 
-Check: Type `S:` in a newly opened "64 Native Tools Command Prompt for VSXXXX". You should then change to the directory `S:`.
+**Note:** You might then also have to execute `subst S: mypath` once in the "64 Native Tools Command Prompt for VSXXXX". Then close the "64 Native Tools Command Prompt for VSXXXX" first before executing the next check again. When opening the "64 Native Tools Command Prompt for VSXXXX" always execute `S:` first to switch the directory.
+
+**Check:** Type `S:` in a newly opened "64 Native Tools Command Prompt for VSXXXX". You should then change to the directory `S:`.
 
 ## Clone the sources
 
