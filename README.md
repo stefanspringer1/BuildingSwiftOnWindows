@@ -114,6 +114,9 @@ git clone https://github.com/apple/swift-driver swift-driver
 git clone https://github.com/apple/swift-argument-parser swift-argument-parser
 git clone -c core.autocrlf=input https://github.com/apple/swift-package-manager swift-package-manager
 git clone https://github.com/apple/indexstore-db indexstore-db
+git clone https://github.com/apple/sourcekit-lsp sourcekit-lsp
+git clone https://github.com/apple/swift-crypto swift-crypto
+git clone https://github.com/apple/swift-collections swift-collections
 
 ```
 
