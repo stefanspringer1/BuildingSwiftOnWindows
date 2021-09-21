@@ -218,8 +218,6 @@ You can then checkout the tag found with e.g.:
 git -C swift checkout tags/swift-5.4.3-RELEASE
 ```
 
-**Note:** It is easier to use the `-C ... ` argument at _the end_ of the command if you want to checkout the "same" tag for several repositories.
-
 **Important:** The naming conventions for those tags might change.
 
 You can then checkout a commit with e.g.:
