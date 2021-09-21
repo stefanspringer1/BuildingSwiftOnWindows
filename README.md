@@ -2,6 +2,10 @@
 
 _This document can be considered as a longer, more detailed version of https://github.com/apple/swift/blob/main/docs/WindowsBuild.md. It is not part of the official Swift distribution. It comes without warranty._
 
+## Your Windows Installation
+
+Of course, it might be helpful at some point to e.g. build a debug version of Swift on a non-English system, but for better communication of problems etc. an English installation should be preferred. A "Pro" version of Windows is not necessary.
+
 ## Developer Mode
 
 The Developer Mode should be activated in the Windows settings. One reason for this is that the tools should be able to set symbolic links, but Microsoft has decided that symbolic links might be harmful (see [there](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc766301(v=ws.10)) under "Create symbolic links").
@@ -158,7 +162,23 @@ If you want the sources, the links for according repositories are:
 
 The sources for sqlite-3.28.0 can be obtained from https://sqlite.org/index.html, the ones for `icu-67` from https://icu.unicode.org/download.
 
-## Check out the sources with certain tags
+## How to know which versions of source to use
+
+Of course, you can always try to build the current main version of the source, but this always a work in progress, so the current versionmay not build. You might (at least first) use versions of the sources that _should_ build.
+
+You can use a commit number or a tag to checkout a certain version of a repository. The next section explains how to do that, once you know the tag or the commit number, and also how to loook up the tags in a repository.
+
+When building for Windows, get the _commit numbers_ of the repositories so that a build should be successful as follows:
+
+1. Go to https://dev.azure.com/compnerd/swift-build/_build.
+2. Click on "AlL".
+3. Seeach for a pipeline that is named like the Visual Studio version that you are using together with a Swift version number (e.g. "VS2019 5.4"). Don't mind a red symbol. Click on it.
+4. Now you have a new list of builds. Click of the first that does not have a red symbol (so it has only "Success" and "Warning" symbols).
+4. Srcoll donw to the "Sources" section. You can find the commit numbers for the different repositories under "Version". (For commits, only the first eight digits are displayed, usually that is enough, see next section. The whole commit number is the last part of the URL of that link.)
+
+Check-out all repositories with the according commit numbers as explained in the next section.
+
+## Check out the sources of certain commits or tags
 
 To get the tags in a repository, filtered by an expression, use in `S:` the following command for e.g. alles release versions for the "swift" repository, press the space bar to read more after an ":" or press "q" to quit:
 
@@ -181,6 +201,18 @@ git -C swift checkout tags/swift-5.4.3-RELEASE
 ```
 
 **Important:** The naming conventions for those tags might change.
+
+You can then checkout a commit with e.g.:
+
+```batch
+git -C swift checkout 2990e8bc070aee69b3a1cdecfd526ebf0f7ec5fa
+```
+
+If the first eight digits are unambiguous (in most cases they are), you can use those:
+
+```batch
+git -C swift checkout 2990e8bc
+```
 
 **Important:** Check the Git documentations to see what consequences the various types of checkouts have, in this case we have a so-called "detached head". You also get a warning, you might want to turn the warning permanently off with `git config --global advice.detachedHead false`. If you would like to make changes that you also like to commit, you need to also create a branch while checking out a tag.
 
