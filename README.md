@@ -70,6 +70,8 @@ Git should now be installed by the Visual Studio installer.
 
 **Check:** Does the command `git --version`, executed from the "64 Native Tools Command Prompt for VSXXXX", display a version 2 or greater? If not, add `%ProgramFiles%\Git\usr\bin` to the PATH environment variable.
 
+**Note:** Making the `less` command available in the command line in the following check should not be really necessary. So you might skip the next check and return to it later only if you get according error messages.
+
 **Check:** Is the `less` command available from the "64 Native Tools Command Prompt for VSXXXX"? If not, add `%ProgramFiles%\Git\usr\bin` to the PATH environment variable.
 
 ## The Working Directory
