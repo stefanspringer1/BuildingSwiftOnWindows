@@ -117,6 +117,7 @@ git clone https://github.com/apple/indexstore-db indexstore-db
 git clone https://github.com/apple/sourcekit-lsp sourcekit-lsp
 git clone https://github.com/apple/swift-crypto swift-crypto
 git clone https://github.com/apple/swift-collections swift-collections
+git clone https://github.com/compnerd/swift-build swift-build
 
 ```
 
