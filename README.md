@@ -183,7 +183,7 @@ The sources for sqlite-3.28.0 can be obtained from https://sqlite.org/index.html
 
 ## How to know which versions of source to use
 
-Of course, you can always try to build the current main version of the source, but this always a work in progress, so the current versionmay not build. You might (at least first) use versions of the sources that _should_ build.
+Of course, you can always try to build the current main version of the source, but this always a work in progress, so the current version may not build. You might (at least first) use versions of the sources that _should_ build.
 
 You can use a commit number or a tag to checkout a certain version of a repository. The next section explains how to do that, once you know the tag or the commit number, and also how to loook up the tags in a repository.
 
