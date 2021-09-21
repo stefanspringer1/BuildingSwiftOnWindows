@@ -146,7 +146,7 @@ The instructions assume that the dependencies are in `S:\Library`. The directory
       ┕ usr/...
 ```
 
-To build those dependencies, you first need the sources and build them yourself. You can also download all those dependencies, already built, from https://dev.azure.com/compnerd/swift-build/_build (go to "Artifacts" for a succesful build for ine of those dependencies, e.g. "SQLite", see section "How to know which versions of source to use" for how to navigate on that page).
+To build those dependencies, you first need the sources and build them yourself. You can also download all those dependencies, already built, from https://dev.azure.com/compnerd/swift-build/_build (go to "Artifacts" for a succesful build for each of those dependencies, e.g. "SQLite", see section "How to know which versions of source to use" for how to navigate on that page).
 
 Alternatively you can get them from https://github.com/stefanspringer1/SwiftDependencies.git (but they may be outdated at some point). To do that, in "64 Native Tools Command Prompt for VSXXXX" go to the directory `S:` and execute:
 
